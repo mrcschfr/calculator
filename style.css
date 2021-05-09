@@ -1,0 +1,227 @@
+/* VARIABLES */
+
+:root {
+    /* Colors */
+    --dark-neutral: #5F5B5B;
+    --darker-neutral: #8F8F93;
+    --mid-neutral: #C4C4C4;
+    --light-neutral: #E5E5E5;
+    --operators: #1F2041;
+    --light-operators: #33356b;
+    --controls: #E07A5F;
+    --light-controls: #EBAA98;
+    --display: #738B65;
+    --white: #fff;
+    --black: #000;
+    --shadow: rgba(0, 0, 0, 0.25);
+
+    /* Font size */
+    --header-mobile: 36px;
+    --header-desktop: 48px;
+    --numbers-mobile: 24px;
+    --numbers-desktop: 32px;
+    --text-mobile: 16px;
+    --text-desktop: 18px;
+
+    /* Font family */
+    --font-header: "Orbitron", serif;
+    --font-number: "Roboto Slab", sans-serif;
+    --font-display: "Orbitron", sans-serif;
+}
+
+/* GENERAL */
+
+button {
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+.header {
+    text-align: center;
+    margin: 25px 0px 25px 0px;
+    font-family: var(--font-header);
+    font-size: var(--header-mobile);
+}
+
+/* MID SECTION [General] */
+
+.mid-calculator {
+    margin: auto;
+    background-color: var(--light-neutral);
+    box-shadow: 5px 5px var(--shadow);
+    width: 264px;
+    border: 1px solid var(--shadow);
+}
+
+/* MID SECTION [Screen] */
+
+.mid-calculator-screen {
+    background-color: var(--dark-neutral);
+    margin: 15px;
+    border: 1px solid var(--shadow);
+}
+
+.mid-calculator-screen-display {
+    background-color: black;
+    margin: 15px;
+    padding: 10px;
+    font-family: var(--font-display);
+    font-size: var(--numbers-mobile);
+    border: 1px solid var(--black);
+    text-align: right;
+}
+
+.mid-calculator-screen-display.on {
+    background-color: var(--display);
+    
+}
+
+.mid-calculator-screen-manufacturer {
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-family: var(--font-number);
+}
+
+.mid-calculator-screen-manufacturer span {
+    margin: 15px;
+}
+
+/* MID SECTION [Controls] */
+
+.mid-calculator-controls {
+    margin: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--mid-neutral);
+    border: 1px solid var(--shadow);
+}
+
+.mid-calculator-controls-key {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background-color: var(--controls);
+    font-family: var(--font-number);
+    font-size: var(--numbers-mobile);
+    border: 1px solid var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 2px 0px var(--dark-neutral);
+}
+
+.mid-calculator-controls-key:hover {
+    background-color: var(--light-controls);
+}
+
+.mid-calculator-controls-key:active {
+    margin: 6px 5px 4px 5px;
+    box-shadow: 0px 0px 0px 0px;
+}
+
+/* MID SECTION [On/ off switch] */
+
+.mid-calculator-controls-switch {
+    width: 40px;
+    padding: 5px;
+    margin: 5px 5px 5px 5px;
+    align-self: center;
+    border: 1px solid var(--black);
+    background-color: var(--dark-neutral);
+    box-sizing: border-box;
+}
+
+#toggle {
+    float: left;
+    width: 13px;
+    height: 13px;
+    background-color: var(--mid-neutral);
+    border: 1px solid var(--black);
+}
+
+#toggle.on {
+    float:right;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* MID SECTION [Keypad] */
+
+.mid-calculator-keypad {
+    margin: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: var(--mid-neutral);
+    border: 1px solid var(--shadow);
+}
+
+.mid-calculator-keypad-key,
+.mid-calculator-keypad-operator {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    font-family: var(--font-number);
+    font-weight: 400;
+    font-size: var(--numbers-mobile);
+    border: 1px solid var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px 0px var(--dark-neutral);
+}
+
+.mid-calculator-keypad-key {
+    background-color: var(--darker-neutral);
+}
+
+.mid-calculator-keypad-key:hover {
+    background-color: var(--mid-neutral);
+}
+
+.mid-calculator-keypad-operator:hover {
+    background-color: var(--light-operators);
+}
+
+.mid-calculator-keypad-key:active,
+.mid-calculator-keypad-operator:active {
+    margin: 6px 5px 4px 5px;
+    box-shadow: 0px 0px 0px 0px;
+}
+
+.mid-calculator-keypad-operator {
+    background-color: var(--operators);
+    color: var(--white);
+}
+
+/* We're taking a mobile-first approach */
+@media (min-width: 576px) {
+
+}
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 40px 0px 0px 0px;
+    padding: 10px 20px;
+    background-color: var(--light-neutral);
+}
+
+.footer img:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 576px) {
+
+}
