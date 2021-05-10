@@ -164,7 +164,8 @@ button {
 }
 
 .mid-calculator-keypad-key,
-.mid-calculator-keypad-operator {
+.mid-calculator-keypad-operator,
+.mid-calculator-keypad-equals {
     width: 40px;
     height: 40px;
     margin: 5px;
@@ -187,17 +188,20 @@ button {
     background-color: var(--mid-neutral);
 }
 
-.mid-calculator-keypad-operator:hover {
+.mid-calculator-keypad-operator:hover,
+.mid-calculator-keypad-equals:hover {
     background-color: var(--light-operators);
 }
 
 .mid-calculator-keypad-key:active,
-.mid-calculator-keypad-operator:active {
+.mid-calculator-keypad-operator:active,
+.mid-calculator-keypad-equals:active {
     margin: 6px 5px 4px 5px;
     box-shadow: 0px 0px 0px 0px;
 }
 
-.mid-calculator-keypad-operator {
+.mid-calculator-keypad-operator,
+.mid-calculator-keypad-equals {
     background-color: var(--operators);
     color: var(--white);
 }
