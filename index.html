@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <title>The Odin Project - Calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>Calculator</h1>
+    </div>    
+    <div class="mid">
+        <div class ="mid-calculator">
+            <div class="mid-calculator-screen">
+                <div class="mid-calculator-screen-display" id="display">
+                    <div>0</div>
+                </div>
+                <div class="mid-calculator-screen-manufacturer">
+                    <span>The Odin Project</span>
+                </div>
+            </div>
+            <div class="mid-calculator-controls">
+                <button class="mid-calculator-controls-key" id="ce">CE</button>
+                <button class="mid-calculator-controls-key" id="c">C</button>
+                <button class="mid-calculator-controls-key hidden"></button>
+                <div class="mid-calculator-controls-switch" id="onoff">
+                    <div class="off" id="toggle"></div>
+                </div>
+            </div>
+            <div class="mid-calculator-keypad">
+                <div class="mid-calculator-keypad-key" data-value="1">
+                    <span>1</span>
+                </div>
+                <button class="mid-calculator-keypad-key" data-value="2">2</button>
+                <button class="mid-calculator-keypad-key" data-value="3">3</button>
+                <button class="mid-calculator-keypad-operator" data-value="+">+</button>
+                <button class="mid-calculator-keypad-key" data-value="4">4</button>
+                <button class="mid-calculator-keypad-key" data-value="5">5</button>
+                <button class="mid-calculator-keypad-key" data-value="6">6</button>
+                <button class="mid-calculator-keypad-operator" data-value="-">-</button>
+                <button class="mid-calculator-keypad-key" data-value="7">7</button>
+                <button class="mid-calculator-keypad-key" data-value="8">8</button>
+                <button class="mid-calculator-keypad-key" data-value="9">9</button>
+                <button class="mid-calculator-keypad-operator" data-value="*">*</button>
+                <button class="mid-calculator-keypad-key" data-value="0">0</button>                
+                <button class="mid-calculator-keypad-key" data-value=".">.</button>
+                <button class="mid-calculator-keypad-operator" data-value="%">%</button>
+                <button class="mid-calculator-keypad-equals" data-value="=" id="equals">=</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <img src="img/GitHub-Mark-32px.png">
+    </div>
+    <script src="script.js"></script>
+</body>
