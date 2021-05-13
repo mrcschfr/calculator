@@ -35,6 +35,12 @@ button {
     box-sizing: border-box;
 }
 
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 /* HEADER */
 
 .header {
@@ -47,7 +53,7 @@ button {
 /* MID SECTION [General] */
 
 .mid-calculator {
-    margin: auto;
+    margin: 25px auto 50px auto;
     background-color: var(--light-neutral);
     box-shadow: 5px 5px var(--shadow);
     width: 264px;
@@ -125,10 +131,23 @@ button {
 
 /* MID SECTION [On/ off switch] */
 
-.mid-calculator-controls-switch {
-    width: 40px;
-    padding: 5px;
+.mid-calculator-controls-power {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.mid-calculator-controls-power-text {
+    text-align: right;
     margin: 5px 5px 5px 5px;
+    font-family: var(--font-number);
+    font-size: 12px;
+}
+
+.mid-calculator-controls-power-switch {
+    width: 40px;
+    padding: 2px 1px 2px 1px;
+    margin: 0px 5px 5px 5px;
     align-self: center;
     border: 1px solid var(--black);
     background-color: var(--dark-neutral);
@@ -217,7 +236,7 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    margin: 40px 0px 0px 0px;
+    margin: auto 0px 0px 0px;
     padding: 10px 20px;
     background-color: var(--light-neutral);
 }

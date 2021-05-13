@@ -26,16 +26,18 @@
             </div>
             <div class="mid-calculator-controls">
                 <button class="mid-calculator-controls-key" id="ce">CE</button>
-                <button class="mid-calculator-controls-key" id="c">C</button>
+                <button class="mid-calculator-controls-key" id="b">⬅</button>
                 <button class="mid-calculator-controls-key hidden"></button>
-                <div class="mid-calculator-controls-switch" id="onoff">
-                    <div class="off" id="toggle"></div>
+                <div class="mid-calculator-controls-power">
+                    <div class="mid-calculator-controls-power-text">Off | On</div>
+                    <div class="mid-calculator-controls-power-switch" id="onoff">
+                        <div class="off" id="toggle"></div>
+                    </div>
                 </div>
+                
             </div>
             <div class="mid-calculator-keypad">
-                <div class="mid-calculator-keypad-key" data-value="1">
-                    <span>1</span>
-                </div>
+                <button class="mid-calculator-keypad-key" data-value="1">1</button>
                 <button class="mid-calculator-keypad-key" data-value="2">2</button>
                 <button class="mid-calculator-keypad-key" data-value="3">3</button>
                 <button class="mid-calculator-keypad-operator" data-value="+">+</button>
@@ -49,13 +51,13 @@
                 <button class="mid-calculator-keypad-operator" data-value="*">*</button>
                 <button class="mid-calculator-keypad-key" data-value="0">0</button>                
                 <button class="mid-calculator-keypad-key" data-value=".">.</button>
-                <button class="mid-calculator-keypad-operator" data-value="%">%</button>
                 <button class="mid-calculator-keypad-equals" data-value="=" id="equals">=</button>
+                <button class="mid-calculator-keypad-operator" data-value="/">/</button>
             </div>
         </div>
     </div>
     <div class="footer">
-        <img src="img/GitHub-Mark-32px.png">
+        <a href="https://github.com/mrcschfr/calculator"><img src="img/GitHub-Mark-32px.png"></a>
     </div>
     <script src="script.js"></script>
 </body>
