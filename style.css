@@ -80,7 +80,10 @@ body {
 
 .mid-calculator-screen-display.on {
     background-color: var(--display);
-    
+}
+
+#upperDisplay {
+    font-size: var(--text-mobile);
 }
 
 .mid-calculator-screen-manufacturer {

@@ -123,7 +123,7 @@ function handleCE(e) {
     updateScreen(Number(userInput));
 }
 
-function handleDivisionByZero(msg) {
+function handleTextOutput(msg) {
     updateScreen(msg);
     
     history = [];
@@ -155,7 +155,7 @@ function handleBack(e) {
 // Will be called when the calculator is switched on/ off
 function handleToggle(e) {
     document.getElementById('toggle').classList.toggle('on');
-    document.getElementById('display').classList.toggle('on');
+    document.querySelector('.mid-calculator-screen-display').classList.toggle('on');
 
     handleCE();
 }
@@ -167,7 +167,8 @@ function handleOperator(e) {
     // Check whether the previous input was also an operator
     if (lastAction != null) {
         // Nothing happens if it's just operator after operator
-        if (lastAction === 'ops') {           
+        if (lastAction === 'ops') {       
+            currentOperation = e.target.attributes['data-value'].value;   
             return;
         }
     } else {
@@ -185,13 +186,20 @@ function handleOperator(e) {
     if (currentOperation != null) {
         // It's always the last and second-to-last element of the history array
         result = calculateResult(history[history.length - 2], history[history.length - 1]);
-        result = fitNumber(result);
 
         if (isNaN(result)) {
             handleDivisionByZero(result);
             return;
         }
 
+        result = fitNumber(result);
+    
+        // Check if number was too big
+        if (isNaN(result)) {
+            handleTextOutput(result);
+            return;
+        }
+               
         history.push(result);
     }
 
@@ -219,7 +227,6 @@ function handleEqual(e) {
         return;
     }
 
-
     lastAction = 'equ';
 
     // If the user has put in digits, push the whole number to the history
@@ -231,10 +238,18 @@ function handleEqual(e) {
     if (currentOperation != null) {
         // It's always the last and second-to-last element of the history array
         let result = calculateResult(history[history.length - 2], history[history.length - 1]);
+
+        // Check if division by zero occured
+        if (isNaN(result)) {
+            handleTextOutput(result);
+            return;
+        }
+
         result = fitNumber(result);
 
+        // Check if number was too big
         if (isNaN(result)) {
-            handleDivisionByZero(result);
+            handleTextOutput(result);
             return;
         }
 
@@ -243,14 +258,14 @@ function handleEqual(e) {
     
     currentOperation = null;
     
-    updateScreen(Number(history[history.length - 1]));
+    updateScreen(history[history.length - 1]);
 
     // Reset the display value without updating the screen, so this happens as soon as a new number key is pressed
     userInput = 0;
     hasUserTyped = false;
 }
 
-// Provide (German) keyboard support by calling the respective click function on keydown
+// Provide keyboard support by calling the respective click function on keydown
 function handleKeydown(e) {
     console.log(`e.code: ${e.code}`);
     console.log(`e.key: ${e.key}`);
@@ -357,12 +372,12 @@ function init() {
 // DONE --------------------------------------- 1. Make operators behave like a plus sign, when the first operator is logged in (i.e. allow the user to string operations together)
 // DONE  -------------------------------------- 2. Make the keyboard work
 // DONE  -------------------------------------- 3. Swap the keys (% and =)
-// 4. Set up the desktop view
+// DONE  --------------------------------------4. Set up the desktop view
 // DONE  -------------------------------------- 5. Add "Power" on top of toggle
 // DONE  -------------------------------------- 6. Make display not disappear when the last sign is deleted
-// 7. Shorten the possible floating point numbers
+// DONE  --------------------------------------7. Shorten the possible floating point numbers
 // DONE  -------------------------------------- 8. "Forget" everything once shut off
 // DONE  -------------------------------------- 9. Slicing off ("backspace") does not work when result is a number
 // DONE  -------------------------------------- 10. Display a snarky error message if the user tries to divide by 0… don’t let it crash your calculator!
 
-
+// Message to dive by zero
