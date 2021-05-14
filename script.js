@@ -365,19 +365,3 @@ function init() {
     // Add event listeners for keyboard
     document.addEventListener('keydown', handleKeydown);
 }
-
-
-// TODO
-
-// DONE --------------------------------------- 1. Make operators behave like a plus sign, when the first operator is logged in (i.e. allow the user to string operations together)
-// DONE  -------------------------------------- 2. Make the keyboard work
-// DONE  -------------------------------------- 3. Swap the keys (% and =)
-// DONE  --------------------------------------4. Set up the desktop view
-// DONE  -------------------------------------- 5. Add "Power" on top of toggle
-// DONE  -------------------------------------- 6. Make display not disappear when the last sign is deleted
-// DONE  --------------------------------------7. Shorten the possible floating point numbers
-// DONE  -------------------------------------- 8. "Forget" everything once shut off
-// DONE  -------------------------------------- 9. Slicing off ("backspace") does not work when result is a number
-// DONE  -------------------------------------- 10. Display a snarky error message if the user tries to divide by 0… don’t let it crash your calculator!
-
-// Message to dive by zero
